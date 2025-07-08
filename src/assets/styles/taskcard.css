@@ -1,0 +1,44 @@
+#task-card {
+  margin: 0;
+  height: 9rem;
+  padding: 1rem;
+  background-color: var(--secondary);
+  color: var(--tertiary);
+  border-radius: 5px;
+  filter: drop-shadow(0 14px 2px rgba(0, 0, 0, 0.25));
+  transition: width 0.3s ease-in;
+}
+
+#task-card > * {
+  margin: 0;
+}
+
+#task-name {
+  font-size: 1.7rem;
+  text-decoration: underline 2px var(--tertiary);
+  text-underline-offset: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+#task-description {
+  font-size: 1.2rem;
+  text-wrap: pretty;
+}
+
+@media (min-width: 300px) {
+  #task-card {
+    width: 20rem;
+  }
+}
+
+@media (min-width: 768px) {
+  #task-card {
+    width: 30rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  #task-card {
+    width: 35rem;
+  }
+}

@@ -1,0 +1,57 @@
+.task-item {
+  -webkit-user-drag: element;
+  display: flex;
+  align-items: center;
+  margin: 0 0.2rem;
+  text-decoration: underline 2px;
+  text-underline-offset: 0.2rem;
+}
+
+.task-handle {
+  cursor: grab;
+  width: 1.5rem;
+  transition: width 0.3s ease-in, transform 0.3s ease-in, filter 0.3s ease-in;
+}
+
+.task-handle:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 5px 0.8px #00000054);
+}
+
+.task-body {
+  margin-left: auto;
+  width: 24rem;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  border: 3px solid black;
+  background-color: var(--primary);
+  color: var(--secondary);
+
+  transition: width 0.3s ease-in;
+
+  p {
+    font-size: 1.2rem;
+    transition: font-size 0.3s ease-in;
+  }
+}
+
+.task-item-actions {
+  display: flex;
+  column-gap: 0.5rem;
+  margin-left: auto;
+}
+
+.task-delete-icon,
+.task-edit-icon {
+  cursor: pointer;
+  width: 2rem;
+  transition: filter 0.3s ease-in, transform 0.3s ease-in;
+}
+
+.task-delete-icon:hover,
+.task-edit-icon:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 5px 0.8px #00000054);
+}

@@ -1,0 +1,269 @@
+#add-task {
+  place-self: center flex-start;
+  display: grid;
+  grid-template: 0.2fr 0.2fr 2fr / 1fr;
+  row-gap: 3rem;
+  transition: row-gap 0.3s ease-in, grid-template 0.3s ease-in;
+}
+
+#add-task-title {
+  font-size: 4rem;
+  margin: 0;
+  text-align: center;
+  transition: font-size 0.3s ease-in;
+}
+
+#add-task-header {
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+  width: fit-content;
+  place-self: center;
+
+  h3 {
+    margin: 0.5rem 0;
+    font-size: 2rem;
+    font-style: italic;
+    transition: font-size 0.3s ease-in;
+  }
+}
+
+.add-task-style {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  background-color: var(--sheer-secondary);
+  color: var(--tertiary);
+
+  width: 40rem;
+  height: fit-content;
+  padding: 2rem;
+  border-radius: 7px;
+
+  transition: row-gap 0.3s ease-in, width 0.3s ease-in;
+}
+
+#add-task-form {
+  position: relative;
+  label {
+    font-size: 2rem;
+    margin: 0;
+    transition: font-size 0.3s ease-in;
+  }
+
+  textarea,
+  input {
+    width: 100%;
+    color: white;
+    font-size: 1.2rem;
+    filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0.25));
+    box-shadow: inset 3px 3px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.2s ease-in, filter 0.2s ease-in;
+  }
+
+  textarea {
+    padding: 0.5rem;
+    resize: none;
+    border-radius: 5px;
+    border: 0;
+    background-color: var(--primary);
+  }
+
+  input[type="text"] {
+    padding: 0.5rem;
+    height: 2rem;
+    border-radius: 5px;
+    border: 0;
+    background-color: var(--primary);
+  }
+
+  textarea:focus,
+  input[type="text"]:focus {
+    outline: 0;
+    box-shadow: inset 0 0 rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0 5px 0.8px rgba(0, 0, 0, 0.25));
+  }
+
+  .input-limit {
+    margin: 0.3rem 0;
+  }
+
+  .character-count {
+    position: absolute;
+    right: 2rem;
+    margin: 0.3rem 0;
+  }
+}
+
+#add-task-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1.5rem;
+}
+
+#alert-prompt-btns {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 2rem;
+}
+
+#add-alert-confirm,
+#add-alert-cancel {
+  width: 4rem;
+  height: 4rem;
+  filter: drop-shadow(0 0 0 transparent);
+  transition: filter 0.3s ease-in;
+}
+
+#add-alert-confirm:hover,
+#add-alert-cancel:hover {
+  filter: drop-shadow(0 5px 0.8px rgba(0, 0, 0, 0.25));
+}
+
+#add-alert-form {
+  position: relative;
+  #message {
+    width: 100%;
+  }
+
+  label {
+    font-size: 2rem;
+  }
+
+  select,
+  input {
+    background-color: var(--primary);
+    color: white;
+    font-family: "Josefin Sans";
+
+    height: 2.5rem;
+    padding: 0 0.5rem;
+    border: 0;
+    border-radius: 5px;
+
+    font-size: 1.1rem;
+
+    box-shadow: inset 3px 3px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0.25));
+
+    transition: box-shadow 0.3s ease-in, filter 0.3s ease-in;
+  }
+
+  select:focus,
+  input:focus {
+    outline: 0;
+    box-shadow: inset 0 0 transparent;
+    filter: drop-shadow(0 5px 0.8px rgba(0, 0, 0, 0.25));
+  }
+
+  .input-limit {
+    margin: 0.4rem 0;
+  }
+
+  .character-count {
+    position: absolute;
+    right: 2rem;
+    bottom: 5rem;
+  }
+}
+
+#redirect {
+  text-align: center;
+}
+
+#redirect-confirm {
+  cursor: pointer;
+  place-self: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  filter: drop-shadow(0 0 0 transparent);
+  transition: filter 0.3s ease-in;
+}
+
+#redirect-confirm:hover {
+  filter: drop-shadow(0 5px 0.8px rgba(0, 0, 0, 0.25));
+}
+
+@media (min-width: 380px) {
+  #add-task {
+    row-gap: 1rem;
+
+    .btn-transition {
+      bottom: 4rem;
+    }
+  }
+
+  #add-task-title {
+    font-size: 2rem;
+  }
+
+  .add-task-style {
+    width: 20rem;
+  }
+}
+
+@media (min-width: 768px) {
+  #add-task {
+    row-gap: 1.5rem;
+
+    .btn-transition {
+      right: 4rem;
+    }
+  }
+
+  #add-task-title {
+    font-size: 3rem;
+  }
+
+  .add-task-style {
+    width: 25rem;
+  }
+}
+
+@media (min-width: 992px) {
+  #add-task {
+    row-gap: 2rem;
+
+    .btn-transition {
+      right: 5rem;
+      bottom: 5rem;
+    }
+  }
+
+  #add-task-title {
+    font-size: 3.5rem;
+  }
+  .add-task-style {
+    width: 30rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  #add-task {
+    .btn-transition {
+      right: 6rem;
+    }
+  }
+  #add-task-title {
+    font-size: 4rem;
+  }
+  .add-task-style {
+    width: 35rem;
+  }
+}
+
+@media (min-width: 1500px) {
+  #add-task {
+    row-gap: 3rem;
+    .btn-transition {
+      right: 10rem;
+    }
+  }
+  #add-task-title {
+    font-size: 4.5rem;
+  }
+  .add-task-style {
+    width: 40rem;
+  }
+}

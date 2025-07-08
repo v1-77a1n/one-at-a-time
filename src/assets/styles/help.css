@@ -1,0 +1,153 @@
+@keyframes pulse {
+  from {
+    filter: drop-shadow(0 0 0 transparent);
+  }
+  to {
+    filter: drop-shadow(0 0 10px #ffffffd0);
+  }
+}
+
+#help-btn {
+  cursor: pointer;
+  width: 60px;
+  border-radius: 30px;
+  filter: drop-shadow(0 0 0 transparent);
+  animation: pulse 1s ease-in-out alternate infinite;
+  transition: transform 0.3s ease-in, box-shadow 0.3s ease-in,
+    filter 0.3s ease-in, width 0.3s ease-in;
+}
+
+#help-btn:hover {
+  transform: scale(1.2);
+  box-shadow: 0 5px 0.8px rgba(0, 0, 0, 0.25);
+}
+
+.btn-transition {
+  position: absolute;
+  bottom: 5rem;
+  right: 5rem;
+  width: fit-content;
+  height: fit-content;
+  opacity: 1;
+  transform-origin: center;
+  transition: bottom 0.3s ease-in, right 0.3s ease-in;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100vh;
+  background-color: #00000092;
+  transform-origin: right;
+}
+
+#help-content {
+  width: 40rem;
+  height: fit-content;
+  padding: 2rem;
+  border-radius: 10px;
+  border: 0;
+  background-color: var(--primary);
+  color: var(--secondary);
+
+  transition: width 0.3s ease-in;
+
+  h1 {
+    text-align: left;
+    text-decoration: underline 0.2rem var(--secondary);
+    text-underline-offset: 0.15rem;
+  }
+
+  p {
+    text-align: justify;
+    text-wrap: balance;
+    transition: font-size 0.3s ease-in;
+  }
+}
+
+#help-close {
+  place-self: flex-end;
+}
+
+@media (min-width: 380px) {
+  #help-content {
+    width: 20rem;
+  }
+
+  #help-btn {
+    width: 3rem;
+  }
+
+  .btn-transition {
+    bottom: 5rem;
+    right: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  #help-content {
+    width: 30rem;
+
+    p {
+      font-size: 1.1rem;
+    }
+  }
+
+  #help-btn {
+    width: 3.5rem;
+  }
+
+  .btn-transition {
+    bottom: 3rem;
+    right: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  #help-content {
+    width: 35rem;
+
+    p {
+      font-size: 1.3rem;
+    }
+  }
+
+  #help-btn {
+    width: 4rem;
+  }
+
+  .btn-transition {
+    bottom: 5rem;
+    right: 5rem;
+  }
+}
+
+@media (min-width: 1500px) {
+  #help-content {
+    width: 40rem;
+  }
+
+  .btn-transition {
+    right: 20%;
+  }
+}
+
+@media (min-width: 1800px) {
+  #help-content {
+    p {
+      font-size: 1.4rem;
+    }
+  }
+  #help-btn {
+    width: 5rem;
+  }
+
+  .btn-transition {
+    right: 25%;
+  }
+}
